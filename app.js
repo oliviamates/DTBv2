@@ -1,3 +1,8 @@
+import { motion } from "framer-motion";
+import { Check, Shield, Zap, BarChart3, Bell, Users, RefreshCcw, LineChart, Trophy, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 const { useState } = React;
 const { motion } = window; // framer-motion from CDN (if you include it)
 const { Check, Shield, Zap, BarChart3, Bell, Users, RefreshCcw, LineChart, Trophy, MessageSquare } = window; // lucide-react from CDN
@@ -5,7 +10,7 @@ const { Check, Shield, Zap, BarChart3, Bell, Users, RefreshCcw, LineChart, Troph
 function App() {
   const features = [
     {
-      icon: <Shield className="h-6 w-6" aria-hidden />,
+      icon: <Shield className="h-6 w-6" aria-hidden={true} />,
       title: "Juice‑Free Lines",
       desc: "Our algorithm removes all juice from every line — no vig, ever.",
     },
@@ -93,8 +98,8 @@ function App() {
             <a href="#faq" className="hover:text-white">FAQ</a>
           </nav>
           <div className="flex items-center gap-3">
-            <Button className="bg-transparent border border-white/20 text-[var(--dtb-light)] hover:bg-white/10" onclick="https://app.https://app.dropthebook.com/login.com/enrollment">Sign in</Button>
-            <Button className="bg-[var(--dtb-yellow)] text-black hover:bg-[var(--dtb-yellow)]/90" onclick="https://app.dropthebook.com/enrollment">Start Free Trial</Button>
+            <Button className="bg-transparent border border-white/20 text-[var(--dtb-light)] hover:bg-white/10" onClick="https://app.https://app.dropthebook.com/login.com/enrollment">Sign in</Button>
+            <Button className="bg-[var(--dtb-yellow)] text-black hover:bg-[var(--dtb-yellow)]/90" onClick="https://app.dropthebook.com/enrollment">Start Free Trial</Button>
           </div>
         </div>
       </header>
@@ -223,7 +228,7 @@ function App() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-[var(--dtb-yellow)] text-black hover:bg-[var(--dtb-yellow)]/90" onclick="https://app.dropthebook.com/enrollment">Start Free Trial</Button>
+              <Button className="w-full bg-[var(--dtb-yellow)] text-black hover:bg-[var(--dtb-yellow)]/90" onClick="https://app.dropthebook.com/enrollment">Start Free Trial</Button>
             </CardFooter>
           </Card>
 
@@ -244,7 +249,7 @@ function App() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-[var(--dtb-yellow)] text-black hover:bg-[var(--dtb-yellow)]/90" onclick="https://app.dropthebook.com/enrollment">Go Annual</Button>
+              <Button className="w-full bg-[var(--dtb-yellow)] text-black hover:bg-[var(--dtb-yellow)]/90" onClick="https://app.dropthebook.com/enrollment">Go Annual</Button>
             </CardFooter>
           </Card>
         </div>
@@ -253,7 +258,7 @@ function App() {
         <div className="mt-10 mx-auto max-w-2xl rounded-2xl border border-white/10 bg-white/5 p-6">
           <div className="flex flex-col md:flex-row gap-3">
             <Input placeholder="Enter your email" className="bg-black/40 border-white/10 text-[var(--dtb-light)] placeholder:text-[var(--dtb-gray)]" />
-            <Button className="bg-[var(--dtb-purple)] text-white hover:bg-[var(--dtb-purple)]/90" onclick="support@dropthebook.com">Get Early Access</Button>
+            <Button className="bg-[var(--dtb-purple)] text-white hover:bg-[var(--dtb-purple)]/90" onClick="support@dropthebook.com">Get Early Access</Button>
           </div>
           <p className="mt-3 text-xs text-[var(--dtb-gray)]">By submitting, you agree to our Terms and acknowledge our Privacy Policy.</p>
         </div>
@@ -315,7 +320,7 @@ function App() {
         <div className="mx-auto max-w-7xl px-4 py-10 grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3">
-              <img src="/assets/DTB-Logo-black.png" alt="Drop The Book logo" className="h-8 w-auto" />*/
+              <img src="/assets/DTB-Logo-black.png" alt="Drop The Book logo" className="h-8 w-auto" />
               <span className="font-semibold text-[var(--dtb-light)]">Drop The Book</span>
             </div>
             <p className="mt-3 text-sm text-[var(--dtb-gray)]">Peer‑to‑peer, juice‑free sports betting. Membership only.</p>
@@ -351,6 +356,5 @@ function App() {
   );
 }
 
-}
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
