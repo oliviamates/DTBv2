@@ -1,3 +1,8 @@
+import { motion } from "framer-motion";
+import { Check, Shield, Zap, BarChart3, Bell, Users, RefreshCcw, LineChart, Trophy, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 const { useState } = React;
 const { motion } = window; // framer-motion from CDN (if you include it)
 const { Check, Shield, Zap, BarChart3, Bell, Users, RefreshCcw, LineChart, Trophy, MessageSquare } = window; // lucide-react from CDN
